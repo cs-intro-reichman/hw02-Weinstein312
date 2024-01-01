@@ -15,7 +15,8 @@
             "name": "DamkaBoard",
             "request": "launch",
             "mainClass": "DamkaBoard",
-            "projectName": "hw02-Weinstein312_3bed970b"
+            "projectName": "hw02-Weinstein312_3bed970b",
+            "args": "6"
         },
         {
             "type": "java",
@@ -65,7 +66,8 @@
             "name": "Perfect",
             "request": "launch",
             "mainClass": "Perfect",
-            "projectName": "hw02-Weinstein312_3bed970b"
+            "projectName": "hw02-Weinstein312_3bed970b",
+            "args": "6"
         },
         {
             "type": "java",
