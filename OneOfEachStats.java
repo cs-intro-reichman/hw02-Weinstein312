@@ -15,6 +15,68 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);  
 		
+		//// Initializes important variables
+		boolean boy = false;
+		boolean girl = false;
+		double rand = 0;
+		double avg = 0;
+		int counter = 0;
+		int child_two = 0;
+		int child_three = 0;
+		int child_four_plus = 0;
+
+		for (int i = 0; i < T; i++) {
+			// Reset the child counter and gender booleans to 0 as to count children again
+			counter = 0;
+			boy = false;
+			girl = false;
+
+			while (!boy || !girl) {
+				// loops till boy and girl are both born
+				rand = generator.nextDouble();
+
+				if (rand >= 0.5) {
+					boy = true;
+				}
+				else {
+					girl = true;
+				}
+				counter++;
+			}
+
+			// increments amount of children for stats
+			if (counter >= 4) {
+				child_four_plus++;
+			}
+			else if (counter >= 3) {
+				child_three++;
+			}
+			else {
+				child_two++;
+			}
+			avg += counter;
+		}
+		avg /= T;
+		int child_max = Math.max(child_four_plus, Math.max(child_two, child_three));
+
+		System.out.println("Average: " + avg + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + child_two);
+		System.out.println("Number of families with 3 children: " + child_three);
+		System.out.println("Number of families with 4 or more children: " + child_four_plus);
+		
+
+		System.out.print("The most common number of children is ");
+		
+		if (child_max == child_four_plus) {
+			System.out.print("4 or more.");
+		}
+		else if (child_max == child_three) {
+			System.out.print("3.");
+		}
+		else {
+			System.out.print("2.");
+		}
+
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
 		//// Where "rnd" is the variable that stores the generated random value.

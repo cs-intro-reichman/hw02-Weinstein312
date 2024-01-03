@@ -52,7 +52,8 @@
             "name": "OneOfEachStats",
             "request": "launch",
             "mainClass": "OneOfEachStats",
-            "projectName": "hw02-Weinstein312_3bed970b"
+            "projectName": "hw02-Weinstein312_3bed970b",
+            "args": ["100000", "2345244"]
         },
         {
             "type": "java",
