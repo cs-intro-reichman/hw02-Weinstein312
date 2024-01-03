@@ -10,10 +10,10 @@ public class DamkaBoard {
 			for (int j = 0; j < num; j++) {
 				System.out.print("* ");
 			}
-			if (i % 2 == 0) {
+			if (i % 2 == 1) {
 				System.out.print(" ");
 			}
-			
+
 			System.out.println("");
 			
 			if (i % 2 == 0) {
